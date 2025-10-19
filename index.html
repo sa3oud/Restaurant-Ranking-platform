@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional local SEO services for restaurants. Fill more tables with strategic Google optimization.">
+    <title>Fill More Tables | Restaurant SEO That Actually Works</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            overflow-x: hidden;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #d4af37;
+            letter-spacing: 2px;
+        }
+        
+        nav .nav-links {
+            display: flex;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #d4af37;
+        }
+        
+        .hero {
+            height: 100vh;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23141414" width="1200" height="800"/><circle cx="200" cy="150" r="100" fill="%231a1a1a"/><circle cx="800" cy="400" r="150" fill="%231a1a1a"/><circle cx="1000" cy="200" r="80" fill="%231a1a1a"/></svg>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            padding: 40px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            line-height: 1.1;
+            text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+        }
+        
+        .hero .accent {
+            color: #d4af37;
+            font-style: italic;
+        }
+        
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+            color: #1a1a1a;
+            padding: 20px 50px;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            border: 3px solid #d4af37;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.3);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+        
+        .scroll-indicator::after {
+            content: '↓';
+            font-size: 32px;
+            color: #d4af37;
+        }
+        
+        section {
+            padding: 100px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #d4af37;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .problem-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .problem-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .problem-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+        
+        .problem-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        
+        .problem-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #d4af37;
+        }
+        
+        .stats-section {
+            background: white;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-box {
+            padding: 40px 20px;
+            position: relative;
+        }
+        
+        .stat-box::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+        }
+        
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 900;
+            color: #d4af37;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 15px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .services-section {
+            background: #f8f6f0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #d4af37, #f4d03f);
+            transform: scaleY(0);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 48px;
+            margin-bottom: 25px;
+            display: block;
+        }
+        
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .service-card p {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-card li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #444;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .service-card li:last-child {
+            border-bottom: none;
+        }
+        
+        .service-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .results-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            position: relative;
+        }
+        
+        .results-section::before {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .result-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 50px;
+            border-radius: 20px;
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .result-card:hover {
+            border-color: rgba(212, 175, 55, 0.6);
+            transform: scale(1.05);
+        }
+        
+        .result-metric {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 900;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+        
+        .result-description {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .result-restaurant {
+            margin-top: 20px;
+            font-size: 14px;
+            color: rgba(212, 175, 55, 0.8);
+            font-style: italic;
+        }
+        
+        .pricing-section {
+            background: white;
+        }
+        
+        .pricing-card {
+            max-width: 700px;
+            margin: 60px auto 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 70px 60px;
+            border-radius: 30px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+            color: #1a1a1a;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .pricing-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .pricing-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #d4af37;
+        }
+        
+        .price-amount {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 900;
+            color: white;
+            margin: 30px 0;
+        }
+        
+        .price-amount span {
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 400;
+        }
+        
+        .price-features {
+            margin: 40px 0;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .price-features ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .price-features li {
+            padding: 15px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .price-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .guarantee-badge {
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid #d4af37;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .guarantee-badge strong {
+            color: #d4af37;
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .contact-section {
+            background: #f8f6f0;
+            text-align: center;
+        }
+        
+        .contact-card {
+            max-width: 600px;
+            margin: 60px auto 0;
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .contact-info {
+            margin: 30px 0;
+            font-size: 20px;
+        }
+        
+        .contact-info a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .contact-info a:hover {
+            color: #1a1a1a;
+        }
+        
+        .contact-steps {
+            margin-top: 50px;
+            text-align: left;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+            color: #1a1a1a;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: rgba(255, 255, 255, 0.6);
+            padding: 60px 20px 30px;
+            text-align: center;
+        }
+        
+        footer .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        
+        footer p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .problem-grid,
+            .stats-grid,
+            .services-grid,
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+            
+            .pricing-card,
+            .contact-card {
+                padding: 40px 30px;
+            }
+            
+            nav .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav .nav-links {
+                margin-top: 15px;
+            }
+            
+            nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">RESTAURANT SEO</div>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#results">Results</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Tables Should Be <span class="accent">Full</span></h1>
+            <p>Stop losing customers to competitors. Dominate local search and fill every reservation slot.</p>
+            <a href="#contact" class="cta-button">Get Your Free Audit</a>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+    
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">The Reality</div>
+                <h2 class="section-title" style="color: white;">While You're Cooking...</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.7);">Your competitors are stealing your customers through Google Search</p>
+            </div>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">🔍</div>
+                    <h3>They Can't Find You</h3>
+                    <p>93% of diners search online before choosing a restaurant. If you're not on page 1, you don't exist.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">⭐</div>
+                    <h3>Reviews Are Missing</h3>
+                    <p>Restaurants with 50+ Google reviews get 3x more bookings. Your competition is getting those reviews.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">📱</div>
+                    <h3>Losing Local Traffic</h3>
+                    <p>76% of local searches result in a visit within 24 hours. Every search you miss is money left on the table.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">By The Numbers</div>
+                <h2 class="section-title">The Local Search Opportunity</h2>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number">93%</span>
+                    <span class="stat-label">Search Online First</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">76%</span>
+                    <span class="stat-label">Visit Within 24hrs</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">3x</span>
+                    <span class="stat-label">More Clicks With Reviews</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">46%</span>
+                    <span class="stat-label">Of All Google Searches Are Local</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">What We Do</div>
+                <h2 class="section-title">Your Complete Local Dominance System</h2>
+                <p class="section-subtitle">Everything you need to outrank competitors and attract more hungry customers</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🎯</span>
+                    <h3>Google Business Mastery</h3>
+                    <p>Your Google Business Profile is your digital storefront. We optimize every element to make customers choose you.</p>
+                    <ul>
+                        <li>Complete profile optimization with compelling copy</li>
+                        <li>Professional photo management (food, interior, ambiance)</li>
+                        <li>Weekly posts showcasing specials and events</li>
+                        <li>Strategic attribute selection for maximum visibility</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">⭐</span>
+                    <h3>5-Star Review Engine</h3>
+                    <p>Transform happy diners into your marketing team with our proven review generation system.</p>
+                    <ul>
+                        <li>Custom QR codes for effortless review collection</li>
+                        <li>Staff training on natural review requests</li>
+                        <li>24-hour professional response to all reviews</li>
+                        <li>Reputation monitoring and damage control</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">📍</span>
+                    <h3>Local Search Domination</h3>
+                    <p>Get found for every relevant search in your area with comprehensive local SEO.</p>
+                    <ul>
+                        <li>Strategic keyword research for your cuisine and location</li>
+                        <li>Citation building across 50+ directories</li>
+                        <li>NAP consistency across the entire web</li>
+                        <li>Schema markup for rich search results</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">📊</span>
+                    <h3>Performance Tracking</h3>
+                    <p>See exactly how many customers we're bringing through your door with detailed analytics.</p>
+                    <ul>
+                        <li>Monthly ranking reports for key search terms</li>
+                        <li>Google Business insights (views, calls, directions)</li>
+                        <li>Competitor comparison analysis</li>
+                        <li>ROI tracking and growth projections</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="results-section" id="results">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label" style="color: #d4af37;">Proven Results</div>
+                <h2 class="section-title" style="color: white;">Real Restaurants, Real Growth</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.7);">Average results from the first 90 days of working together</p>
+            </div>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-metric">+247%</div>
+                    <div class="result-description">Increase in Google Profile Views</div>
+                    <div class="result-restaurant">"Trattoria Bella" - Italian Restaurant</div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-metric">+180%</div>
+                    <div class="result-description">More Phone Calls from Google</div>
+                    <div class="result-restaurant">"Le Petit Bistro" - French Cuisine</div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-metric">Page 1</div>
+                    <div class="result-description">Rankings for 15+ Local Keywords</div>
+                    <div class="result-restaurant">"Dragon Palace" - Asian Fusion</div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-metric">58</div>
+                    <div class="result-description">New 5-Star Google Reviews</div>
+                    <div class="result-restaurant">"Casa Mexico" - Mexican Restaurant</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Investment</div>
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-subtitle">One package. Everything included. No hidden fees.</p>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="pricing-badge">LIMITED OFFER</div>
+                <div class="pricing-content">
+                    <h3>Restaurant Visibility Package</h3>
+                    <div class="price-amount">€250<span>/month</span></div>
+                    <p style="color: rgba(255,255,255,0.7); text-align: center; margin-bottom: 20px;">
+                        Everything you need to dominate local search
+                    </p>
+                    
+                    <div class="price-features">
+                        <ul>
+                            <li>Complete Google Business management</li>
+                            <li>Review monitoring & response (24hrs)</li>
+                            <li>Weekly profile posts and updates</li>
+                            <li>Local citation building & maintenance</li>
+                            <li>Monthly ranking & performance reports</li>
+                            <li>Direct phone/email support</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="guarantee-badge">
+                        <strong>🛡️ 60-Day Money-Back Guarantee</strong>
+                        <small>If you don't see measurable improvement, full refund—no questions asked.</small>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="#contact" class="cta-button">Start Getting More Customers</a>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 40px; font-size: 18px; color: #666;">
+                ✨ <strong>Launch Special:</strong> First 5 restaurants get €150/month for the first year
+            </p>
+        </div>
+    </section>
+    
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Let's Talk</div>
+                <h2 class="section-title">Ready to Fill More Tables?</h2>
+                <p class="section-subtitle">Get a free audit of your current Google presence—no obligation</p>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-info">
+                    📧 <a href="mailto:your-email@example.com">your-email@example.com</a>
+                </div>
+                <div class="contact-info">
+                    📱 <a href="tel:+31612345678">+31 6 1234 5678</a>
+                </div>
+                <div class="contact-info">
+                    📍 Serving restaurants in North Holland, Netherlands
+                </div>
+                
+                <div class="contact-steps">
+                    <h3 style="margin-bottom: 30px; font-family: 'Playfair Display', serif;">What Happens Next?</h3>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>We'll schedule a 15-minute call at your convenience</div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>I'll audit your Google presence (free, no strings attached)</div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>I'll show you exactly what's holding you back</div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>If it's a fit, we'll get started immediately</div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="lead-magnet.html" class="cta-button" style="font-size: 16px; padding: 15px 35px;">Download Free Guide</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="logo">RESTAURANT SEO</div>
+        <p>© 2025 [Your Business Name] | Local Restaurant SEO Specialist</p>
+        <p>Helping restaurants attract more hungry customers through Google</p>
+    </footer>
+</body>
+</html>
